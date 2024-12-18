@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ravindra's Portfolio</title>
     <link rel="icon" href="favicon.png">
+    <link rel="stylesheet" href="style.css">
     <style>
        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
 
@@ -32,53 +33,6 @@ body {
     overflow-x: hidden; /* Prevent horizontal scroll */
 }
 
-/* Skill Circle */
-.skill-circle {
-    position: relative;
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    background: conic-gradient(#FFD700 var(--percentage), #222 0deg);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 1rem auto;
-    transition: all 0.5s ease;
-}
-
-.skill-circle .percentage {
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: white;
-}
-
-/* Add an optional hover effect to animate the circle when hovering over the skill card */
-.skil-card:hover .skill-circle {
-    transform: scale(1.1);
-}
-
-/* CSS to set the percentage dynamically using custom properties */
-.skil-card[data-percentage="90"] .skill-circle {
-    --percentage: 90deg;
-}
-
-.skil-card[data-percentage="85"] .skill-circle {
-    --percentage: 85deg;
-}
-
-.skil-card[data-percentage="70"] .skill-circle {
-    --percentage: 70deg;
-}
-
-.skil-card[data-percentage="80"] .skill-circle {
-    --percentage: 80deg;
-}
-
-.skil-card[data-percentage="75"] .skill-circle {
-    --percentage: 75deg;
-}
-
-/* Main layout and other styling */
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -88,6 +42,10 @@ body {
     position: sticky;
     top: 0;
     z-index: 10;
+}
+
+.navbar-left img {
+    /* Add styling for logo if necessary */
 }
 
 .navbar-right {
@@ -142,7 +100,13 @@ section {
     line-height: 1.8;
 }
 
-/* Skills Section */
+.About img {
+    max-width: 60%;
+    height: auto;
+    border-radius: 10px;
+    padding-left: 300px;
+}
+
 .Skills {
     text-align: center;
 }
@@ -174,7 +138,6 @@ section {
     margin-bottom: 1rem;
 }
 
-/* Contact Section */
 .contact {
     text-align: center;
     margin-top: 4rem;
@@ -263,6 +226,11 @@ section {
         height: 300px;
     }
 
+    .About img {
+        max-width: 80%;
+        padding-left: 0;
+    }
+
     .skill-container {
         flex-direction: column;
         gap: 2rem;
@@ -271,6 +239,10 @@ section {
     .skil-card {
         width: 90%;
         padding: 1.5rem;
+    }
+
+    .contact-info p {
+        font-size: 1.2rem; /* Larger font for smaller devices */
     }
 
     .social-icon img {
@@ -307,6 +279,10 @@ section {
         height: 250px;
     }
 
+    .About img {
+        max-width: 90%;
+    }
+
     .skill-container {
         gap: 1.5rem;
     }
@@ -314,6 +290,10 @@ section {
     .skil-card {
         width: 100%;
         padding: 1rem;
+    }
+
+    .contact-info p {
+        font-size: 1rem; /* Make text even smaller on mobile */
     }
 
     .social-icon img {
@@ -352,35 +332,74 @@ section {
         </div>
     </section>
 
+    <section class="About" id="About">
+        <h1>About</h1>
+        <p> I am a passionate and driven CSE  (AI&ML) with a keen interest in WEB DEVELOPMENT , USING AI TOOLS . With a strong foundation in WEB DEVELOPMENT INTERNSHIP IN GROWWINTERN , I thrive on creating innovative solutions and delivering high-quality results. My goal is to combine creativity, technical expertise, and problem-solving skills to contribute to impactful projects and collaborate with like-minded professionals</p>
+        <div class="pic-container">
+            <img class="Aboutimg" src="88e7a616-100a-4831-b20b-ef4b42b6ca78.jpeg" alt="About Image">
+        </div>
+        <p class="paraabout">
+
+        </p>
+    </section>
+
     <section class="Skills" id="Skills">
         <h1>Skills</h1>
         <div class="skill-container">
-            <div class="skil-card" data-percentage="90">
+            <div class="skil-card">
                 <h2>Web Development</h2>
-                <div class="skill-circle" data-percentage="90">
-                    <span class="percentage">90%</span>
-                </div>
                 <img class="pic-1" src="OIP (1).jpg" alt="Web Development">
                 <p>I bring websites to life with clean, semantic HTML and CSS, crafting visually stunning and responsive interfaces that adapt seamlessly to any device.</p>
             </div>
-            <div class="skil-card" data-percentage="85">
+            <div class="skil-card">
                 <h2>Python</h2>
-                <div class="skill-circle" data-percentage="85">
-                    <span class="percentage">85%</span>
-                </div>
                 <img class="pic-2" src="5fd71b656c6ba-python-logo.webp" alt="Python">
                 <p>Python is widely used in data analysis and visualization. Frameworks like Django and Flask are used for backend web development, as well as for scripting and automation.</p>
-                <a href="https://www.linkedin.com/posts/ravindra-korchipati-12a0b5263_pythonfoundationcertification-pythondeveloper-activity-7117509336989331457-3Z0V?utm_source=share&utm_medium=member_desktop" target="_blank">Click here for more</a>
+                <a href=" https://www.linkedin.com/posts/ravindra-korchipati-12a0b5263_pythonfoundationcertification-pythondeveloper-activity-7117509336989331457-3Z0V?utm_source=share&utm_medium=member_android">
+                    <p class="certificate">View Certificate</p>
+                </a>
             </div>
-            <div class="skil-card" data-percentage="70">
-                <h2>Machine Learning</h2>
-                <div class="skill-circle" data-percentage="70">
-                    <span class="percentage">70%</span>
-                </div>
-                <img class="pic-3" src="machine-learning.jpg" alt="Machine Learning">
-                <p>Familiar with machine learning concepts, algorithms, and techniques. Hands-on experience with libraries like Scikit-learn and TensorFlow for building predictive models.</p>
+            <!-- Cloud Computing Skill with margin -->
+            <div class="skil-card cloud-computing">
+                <h2>Cloud Computing</h2>
+                <img class="ravindra cc.jpeg" src="cc.png" alt="Cloud computing">
+                <p>Cloud Computing is the delivery of computing services (storage, processing, software) over the internet. Instead of owning physical servers, users rent resources from cloud providers, offering flexibility, scalability, and cost-efficiency.</p>
+                <a href="https://www.linkedin.com/posts/ravindra-korchipati-12a0b5263_cloud-computing-nptel-activity-7267589265461506051-i813">
+                    <p class="certificate">View Certificate</p>
+                </a>
+            </div>
+            <!-- Cybersecurity Skill with margin -->
+            <div class="skil-card cybersecurity">
+                <h2>Cybersecurity</h2>
+                <img class="pic-3" src="cs.jpg" alt="Cyber security">
+                <p>Cybersecurity is the protection of computer systems, networks, and data from cyber threats like hacking, malware, and unauthorized access. It involves strategies like encryption, firewalls, and access controls to ensure data safety and privacy.</p>
+                <a href="https://www.linkedin.com/posts/ravindra-korchipati-12a0b5263_cybersecurity-certificate-activity-7244327267068190720-ebGX?utm_source=share&utm_medium=member_desktop">
+                    <p class="certificate">View Certificate</p>
+                </a>
+            </div>
+            <div class="skil-card">
+                <h2>AI & ML</h2>
+                <img class="pic-4" src="download.jpg" alt="AI & ML">
+                <p>AI enables machines to reason and adapt like humans, while ML uses algorithms trained on data to create adaptable models that perform complex tasks.</p>
             </div>
         </div>
     </section>
-</body>
-</html>
+    <section class="contact" id="Contact">
+        <h1>Contact Me</h1>
+        <div class="contact-info">
+            <p>Korchipati Bhyagya Ravindra</p>
+            <p>Phone: +91 9032606437</p>
+            <a href="mailto:ravindrakorchipati@gmail.com"><p>Email: ravindrakorchipati@gmail.com</p></a>
+        </div>
+        <div class="social-icon">
+            <a href="https://www.instagram.com/ravindra_korchipati?igsh=MWxtczFkdnNpcXJxbg==">
+                <img src="pics-photos-instagram-logo-png-4.png" alt="Instagram">
+            </a>
+            <a href="https://www.linkedin.com/in/ravindra-korchipati-12a0b5263?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app">
+                <img src="linkedIn_PNG7.png" alt="LinkedIn">
+            </a>
+            <a href="https://github.com/dashboard">
+                <img src="download (1).jpg" alt="GitHub">
+            </a>
+        </div>
+    </section>
